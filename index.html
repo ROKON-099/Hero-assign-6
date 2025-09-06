@@ -72,232 +72,122 @@
      
   <section class="min-h-screen mt-4 flex flex-col lg:flex-row gap-4 p-4">
 
-    <!-- Left Sidebar: Categories -->
-    <div class="bg-[#f0fdf4] p-4 w-full lg:w-1/5 flex-shrink-0">
-      <h2 class="text-xl font-bold mb-4">Categories</h2>
-      <ul class="space-y-2">
-        
-    <li>
-    <a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">
-      All Trees
-    </a>
-    </li>
-    <li>
-    <a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">
-      Flowering Trees
-    </a>
-    </li>
-    <li>
-    <a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">
-      Shade Trees
-    </a>
-    </li>
-    <li>
-    <a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">
-      Medicinal Trees
-    </a>
-    </li>
-    <li>
-    <a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">
-      Fruit Trees
-    </a>
-    </li>
-    <li>
-    <a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">
-      Evergreen Trees
-    </a>
-    </li>
-    <li>
-    <a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">
-      Ornamental Plants
-    </a>
-    </li>
-    <li>
-    <a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">
-      Bamboo
-    </a>
-    </li>
-    <li>
-    <a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">
-      Climbers
-    </a>
-    </li>
-     <li>
-    <a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">
-      Aquatic Plants
-    </a>
-    </li>
-   </ul>
+  <!-- Left Sidebar: Categories -->
+  <div class="bg-[#f0fdf4] p-4 w-full lg:w-1/5 flex-shrink-0">
+    <h2 class="text-xl font-bold mb-4">Categories</h2>
+    <ul class="space-y-2">
+      <li><a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">All Trees</a></li>
+      <li><a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">Flowering Trees</a></li>
+      <li><a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">Shade Trees</a></li>
+      <li><a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">Medicinal Trees</a></li>
+      <li><a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">Fruit Trees</a></li>
+      <li><a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">Evergreen Trees</a></li>
+      <li><a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">Ornamental Plants</a></li>
+      <li><a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">Bamboo</a></li>
+      <li><a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">Climbers</a></li>
+      <li><a href="#" class="block px-2 py-1 rounded hover:bg-[#15803D] hover:text-white transition">Aquatic Plants</a></li>
+    </ul>
+  </div>
 
-    </div>
-
-  <!-- Product card 3*2 -->
-   
-
-       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <!-- Card nubmer-1  -->
-
+  <!-- Product Cards -->
+  <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     
+    <!-- Card 1 -->
     <div class="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition">
-        <!--click image function-->
-    <img src="Mangos.jpg" alt="Mango Tree" class="w-full h-48 object-cover rounded-md" />
-    <h3 class="text-lg font-semibold mt-3">Mango Tree</h3>
-  
-    <p class="text-xs mt-2 whitespace-nowrap text-gray-600">
-    Mango tree is a tropical evergreen, <br class="hidden sm:inline" />tall, give us sweet nutritious fruits,
-    </p>
-  
-    <div class="flex justify-between items-center mt-4">
-    <p class="text-sm bg-green-100 text-center w-24 rounded-lg text-gray-700 py-1">
-      Fruit Tree
-     </p>
-     <!--price add on cart-->
-     <p class="text-gray-800 font-bold">৳500</p>
+      <img src="Mangos.jpg" alt="Mango Tree" class="w-full h-48 object-cover rounded-md" />
+      <h3 class="text-lg font-semibold mt-3">Mango Tree</h3>
+      <p class="text-xs whitespace-nowrap 
+      mt-2 text-gray-600">Mango tree is a tropical ever<br class="hidden sm:inline"/>green gives sweet nutritious fruits.</p>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-sm bg-green-100 text-center w-24 rounded-lg text-gray-700 py-1">Fruit Tree</p>
+        <p class="text-gray-800 font-bold">৳500</p>
+      </div>
+      <button class="add-to-cart mt-4 bg-[#15803D] w-full text-white px-4 py-2 rounded-2xl hover:bg-green-600 transition" data-name="Mango Tree" data-price="500">
+        Add to Cart
+      </button>
     </div>
-      <!--button add cart++-->
-   <button class="mt-4 bg-[#15803D] w-full text-white px-4 py-2 rounded-2xl hover:bg-green-600 transition">
-    Add to Cart
-   </button>
-   </div>
 
-    
-
-      <!-- Card 2 -->
-
-     <div class="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition">
-        <!--click image function-->
-    <img src="guava.jpg" alt="guava Tree" class="w-full h-48 object-cover rounded-md" />
-    <h3 class="text-lg font-semibold mt-3">Guava Tree</h3>
-  
-    <p class="text-xs mt-2 text-gray-600 whitespace-nowrap ">
-    Guava tree is a tropical evergreen,<br class="hidden sm:inline" />small,great resource of Vitamin C.
-    </p>
-  
-    <div class="flex justify-between items-center mt-4">
-    <p class="text-sm bg-green-100 text-center w-24 rounded-lg text-gray-700 py-1">
-      Fruit Tree
-     </p>
-     <!--price add on cart-->
-     <p class="text-gray-800 font-bold">৳500</p>
-    </div>
-      <!--button add cart++-->
-   <button class="mt-4 bg-[#15803D] w-full text-white px-4 py-2 rounded-2xl hover:bg-green-600 transition">
-    Add to Cart
-   </button>
-   </div>
-
-
-      <!-- Card 3 -->
-       <div class="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition">
-        <!--click image function-->
-    <img src="orange.jpg" alt="guava Tree" class="w-full h-48 object-cover rounded-md" />
-    <h3 class="text-lg font-semibold mt-3">Orange Tree</h3>
-  
-    <p class="text-xs mt-2 text-gray-600 whitespace-nowrap ">
-    The orange tree looks so charming.<br class="hidden sm:inline" />small,great resource of Vitamin C.
-    </p>
-  
-    <div class="flex justify-between items-center mt-4">
-    <p class="text-sm bg-green-100 text-center w-24 rounded-lg text-gray-700 py-1">
-      Fruit Tree
-     </p>
-     <!--price add on cart-->
-     <p class="text-gray-800 font-bold">৳500</p>
-    </div>
-      <!--button add cart++-->
-   <button class="mt-4 bg-[#15803D] w-full text-white px-4 py-2 rounded-2xl hover:bg-green-600 transition">
-    Add to Cart
-   </button>
-   </div>
-
-                    <!-- Card 4 -->
+    <!-- Card 2 -->
     <div class="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition">
-        <!--click image function-->
-    <img src="flower1.png" alt="flower Tree" class="w-full h-48 object-cover rounded-md" />
-    <h3 class="text-lg font-semibold mt-3">Cadamba Tree</h3>
-
-    <p class="text-xs mt-2 text-gray-600 whitespace-nowrap ">
-    Cadamba tree is,fragrant medicinal,<br class="hidden sm:inline" /> and valued for timber and flowers.
-
-    </p>
-  
-    <div class="flex justify-between items-center mt-4">
-    <p class="text-sm bg-green-100 text-center w-24 rounded-lg text-gray-700 py-1">
-      Flower Tree
-     </p>
-     <!--price add on cart-->
-     <p class="text-gray-800 font-bold">৳500</p>
+      <img src="guava.jpg" alt="Guava Tree" class="w-full h-48 object-cover rounded-md" />
+      <h3 class="text-lg font-semibold mt-3">Guava Tree</h3>
+      <p class="text-xs mt-2 text-gray-600">Guava tree is tropical<br class="hidden sm:inline" /> small, great source of Vitamin C.</p>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-sm bg-green-100 text-center w-24 rounded-lg text-gray-700 py-1">Fruit Tree</p>
+        <p class="text-gray-800 font-bold">৳500</p>
+      </div>
+      <button class="add-to-cart mt-4 bg-[#15803D] w-full text-white px-4 py-2 rounded-2xl hover:bg-green-600 transition" data-name="Guava Tree" data-price="500">
+        Add to Cart
+      </button>
     </div>
-      <!--button add cart++-->
-   <button class="mt-4 bg-[#15803D] w-full text-white px-4 py-2 rounded-2xl hover:bg-green-600 transition">
-    Add to Cart
-   </button>
-   </div>
-      
 
-      <!-- Card 5 -->
-       
-            
+    <!-- Card 3 -->
     <div class="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition">
-        <!--click image function-->
-    <img src="Eucalyptas.png" alt="Tomber Tree" class="w-full h-48 object-cover rounded-md" />
-    <h3 class="text-lg font-semibold mt-3">Eucalyptas Tree</h3>
-
-    <p class="text-xs mt-2 text-gray-600 whitespace-nowrap ">
-    Eucalyptas tree is fast-growing, aromatic,<br class="hidden sm:inline" /> and valued for timber and oil.
-
-    </p>
-  
-    <div class="flex justify-between items-center mt-4">
-    <p class="text-sm bg-green-100 text-center w-24 rounded-lg text-gray-700 py-1">
-      Flower Tree
-     </p>
-     <!--price add on cart-->
-     <p class="text-gray-800 font-bold">৳500</p>
+      <img src="orange.jpg" alt="Orange Tree" class="w-full h-48 object-cover rounded-md" />
+      <h3 class="text-lg font-semibold mt-3">Orange Tree</h3>
+      <p class="text-xs mt-2 text-gray-600">The orange tree looks nice <br class="hidden sm:inline" /> rich in Vitamin C.</p>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-sm bg-green-100 text-center w-24 rounded-lg text-gray-700 py-1">Fruit Tree</p>
+        <p class="text-gray-800 font-bold">৳500</p>
+      </div>
+      <button class="add-to-cart mt-4 bg-[#15803D] w-full text-white px-4 py-2 rounded-2xl hover:bg-green-600 transition" data-name="Orange Tree" data-price="500">
+        Add to Cart
+      </button>
     </div>
-      <!--button add cart++-->
-   <button class="mt-4 bg-[#15803D] w-full text-white px-4 py-2 rounded-2xl hover:bg-green-600 transition">
-    Add to Cart
-   </button>
-   </div>
-      
-   <!--6 number card-->
-   <div class="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition">
-        <!--click image function-->
-    <img src="bamboo.png" alt="Bamboo Tree" class="w-full h-48 object-cover rounded-md" />
-    <h3 class="text-lg font-semibold mt-3">Bamboo Tree</h3>
 
-    <p class="text-xs mt-2 text-gray-600 whitespace-nowrap ">
-    Bamboo tree is fast-growing,flexible,<br class="hidden sm:inline" /> strong used for contruction.
-
-    </p>
-  
-    <div class="flex justify-between items-center mt-4">
-    <p class="text-sm bg-green-100 text-center w-24 rounded-lg text-gray-700 py-1">
-      Bamboo Tree
-     </p>
-     <!--price add on cart-->
-     <p class="text-gray-800 font-bold">৳500</p>
+    <!-- Card 4 -->
+    <div class="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition">
+      <img src="flower1.png" alt="Cadamba Tree" class="w-full h-48 object-cover rounded-md" />
+      <h3 class="text-lg font-semibold mt-3">Cadamba Tree</h3>
+      <p class="text-xs mt-2 text-gray-600">Cadamba tree is fragrant,medicinal<br class="hidden sm:inline" />use for timber and flowers.</p>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-sm bg-green-100 text-center w-24 rounded-lg text-gray-700 py-1">Flower Tree</p>
+        <p class="text-gray-800 font-bold">৳500</p>
+      </div>
+      <button class="add-to-cart mt-4 bg-[#15803D] w-full text-white px-4 py-2 rounded-2xl hover:bg-green-600 transition" data-name="Cadamba Tree" data-price="500">
+        Add to Cart
+      </button>
     </div>
-      <!--button add cart++-->
-   <button class="mt-4 bg-[#15803D] w-full text-white px-4 py-2 rounded-2xl hover:bg-green-600 transition">
-    Add to Cart
-   </button>
-   </div>
-       </div>
-      
 
-  <!-- Cart -->
-  <div class="bg-green-100 p-4 w-full lg:w-1/5 flex-shrink-0">
-      <h2 class="text-xl font-bold mb-4">🛒 Your Cart</h2>
-      <ul class="space-y-2">
-        <li>Mango Tree: ৳500 × 1</li>
-        <li>Guava Tree: ৳500 × 1</li>
-      </ul>
-      <p class="mt-4 font-bold text-green-700">Total: ৳1000</p>
+    <!-- Card 5 -->
+    <div class="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition">
+      <img src="Eucalyptas.png" alt="Eucalyptas Tree" class="w-full h-48 object-cover rounded-md" />
+      <h3 class="text-lg font-semibold mt-3">Eucalyptas Tree</h3>
+      <p class="text-xs mt-2 text-gray-600">Eucalyptas tree is fast-growing, aromatic, valued for timber and oil.</p>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-sm bg-green-100 text-center w-24 rounded-lg text-gray-700 py-1">Flower Tree</p>
+        <p class="text-gray-800 font-bold">৳500</p>
+      </div>
+      <button class="add-to-cart mt-4 bg-[#15803D] w-full text-white px-4 py-2 rounded-2xl hover:bg-green-600 transition" data-name="Eucalyptas Tree" data-price="500">
+        Add to Cart
+      </button>
     </div>
+
+    <!-- Card 6 -->
+    <div class="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition">
+      <img src="bamboo.png" alt="Bamboo Tree" class="w-full h-48 object-cover rounded-md" />
+      <h3 class="text-lg font-semibold mt-3">Bamboo Tree</h3>
+      <p class="text-xs mt-2 text-gray-600">Bamboo tree is fast-growing, flexible, strong, used for construction.</p>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-sm bg-green-100 text-center w-24 rounded-lg text-gray-700 py-1">Bamboo Tree</p>
+        <p class="text-gray-800 font-bold">৳500</p>
+      </div>
+      <button class="add-to-cart mt-4 bg-[#15803D] w-full text-white px-4 py-2 rounded-2xl hover:bg-green-600 transition" data-name="Bamboo Tree" data-price="500">
+        Add to Cart
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Right Sidebar: Cart -->
+  <div class="bg-[#f0fdf4] p-4 w-full lg:w-1/5 flex-shrink-0">
+    <h2 class="text-xl font-bold mb-4">🛒 Your Cart</h2>
+    <ul id="cart-items" class="space-y-2"></ul>
+    <p id="cart-total" class="mt-4 font-bold text-green-700">Total: ৳0</p>
+  </div>
+
 </section>
-  
+<script src="Script.js"></script>
+    
 </body>
 </html>
