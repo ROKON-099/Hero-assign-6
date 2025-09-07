@@ -12,55 +12,108 @@
 
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
-      rel="stylesheet"
-      type="text/css"
-    />
+      rel="stylesheet type="text/css"/>
+<!--
+    * {
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color:white;
+  color: ##f0fdf4;
+  max-width: 1200px;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid;
+  max-width: 1140px;
+  border: none;
+}
+
+.nav-ber  a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-ber a:hover {
+  color: #ff6600;
+}
+  .cta button-{
+  width: 180px;
+  margin-top: 5px;
+  background:#E95A08;
+  border:none;
+  padding: 5px;
+  color:#f8f8f8;
+  cursor: pointer
+  transition: color 0.3s ease;
+}
+
+.cta button :hover {
+  background-colur: gray;
+}
+-->
 
 
+ </head>
+ <body class="bg-[#f0fdf4]" >
+        <header class="bg-[#15803D] text-white px-6 py-4 flex 
+        flex-col md:flex-row md:items-center md:justify-between flex-wrap">
 
-</head>
-<body class="bg-[#f0fdf4]"" >
-<header class="bg-[#15803D] text-white px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between flex-wrap">
+              <!-- navagation ber -->
 
-  <!-- Logo Section -->
+       <div class="flex items-center justify-center 
+       md:justify-start gap-[12px] mb-[1rem] md:mb-0 w-full md:w-auto">
 
-  <div class="flex items-center justify-center md:justify-start gap-3 mb-4 md:mb-0 w-full md:w-auto">
-    
-    <!-- <img src="img/remove-bg.png" alt="Green Earth Logo" class="h-12 w-auto rounded-xl shadow-lg"> -->
+                    <!--page logo-->
+       <!-- <img src="img/remove-bg.png" alt="Green Earth Logo" 
+        class="h-12 w-auto rounded-xl shadow-lg"> -->
+
     <span class="text-2xl font-bold text-white">Green Earth</span>
-  </div>
+    </div>
+    <nav class="flex flex-wrap justify-center 
+     gap-[1.5rem] text-lg mb-[1rem] md:mb-0 md:flex-1">
+    <a href="#"  class="hover:text-[#fdc700]  transition"> About</a>
+    <a href="#" class="hover:text-[#fdc700]  transition">Gallery</a>
+     <a href="#" class="hover:text-[#fdc700] transition">Plant a Tree</a>
+    </nav>
 
-  <!-- Navigation Links -->
-  <nav class="flex flex-wrap justify-center gap-6 text-lg mb-4 md:mb-0 md:flex-1">
-    <a href="#" class="hover:text-yellow-400 transition">About</a>
-    <a href="#" class="hover:text-yellow-400 transition">Gallery</a>
-    <a href="#" class="hover:text-yellow-400 transition">Plant a Tree</a>
-  </nav>
-
-  <!-- CTA Button -->
-  <div class="flex justify-center md:justify-end w-full md:w-auto">
+   <div class="flex justify-center md:justify-end w-full md:w-auto">
     <a href="#" class="bg-[#FACC15] text-[#2bb55d] font-semibold px-4 py-2 rounded-lg hover:bg-gray-300 transition">
       Plant a Tree
     </a>
   </div>
 </header>
 
-       <!--future planat design  -->
+                       <!--future planat design  -->
 
-<div class="h-59 bg-green-100 rounded-md px-6 py-4 flex flex-col md:flex-row items-center justify-between flex-wrap relative">
+  <div class="h-59 bg-green-100 rounded-md px-[1.5rem] py-[1rem] flex flex-col 
+     md:flex-row items-center justify-between flex-wrap relative">
   <img src="hero-leaf1.png" alt="Leaf 1" 
-       class="hidden md:block h-55 w-auto rotate-[1.5deg] self-end" />
+      class="hidden md:block h-55 w-auto rotate-[1.5deg] self-end" />
 
   <!-- Center Text & Button -->
-  <div class="text-center flex-1 px-4">
+  <div class="text-center flex-1 px-[1rem]">
     <h1 class="lg:text-3xl text-2xl whitespace-nowrap  font-bold text-[#1F2937]">
       Plant a Tree, Grow a Future
     </h1>
-    <p class="text-[10px] mt-1 text-green-700">
+    <p class="text-[10px] mt-[4px] text-green-700">
       Join our mission to plant 1 million trees and make the Earth greener for future<br> generations.
     </p>
 
-    <button class="bg-[#FACC15] mt-4 text-[#2bb55d] font-semibold py-2 px-4 rounded-xl hover:bg-gray-300 transition">
+    <button class="bg-[#FACC15] mt-[16px] text-[#2bb55d] font-semibold py-[.5rem] px-[1rem] rounded-xl hover:bg-gray-300 transition">
       Get Involved
     </button>
   </div>
@@ -70,15 +123,63 @@
 
 </div>
 
-                  <!--Main section -->
+                    <!--Main section card a modal add koralagbo 
+                    cart a heading name + price add/ ar side ar 
+                    hover green dewa lagbo
+                    -->
 
-    <h2 class="text-center text-black-1000 text-2xl mt-10 font-semibold">
+                  
+
+    <h2 class="text-center text-black-1000 text-2xl mt-[2.5rem] font-semibold">
         Choose your trees
     </h2>
      
   <section class="min-h-screen mt-4 flex flex-col lg:flex-row gap-4 p-4">
 
   <!-- Left Sidebar: Categories -->
+   <!--
+  <div class="card bg-base-95 w-auto shadow-sm">
+   <figure>
+    <img
+      src="mangoes.jpg" alt="mangoe"
+      alt="Shoes" />
+  </figure>
+  <div class="card-Boddy">
+    <h2 class="card-title">Mangoes tree</h2>
+    <p>A Mangoes tree is a important tree for us , it gives us fruit timber </p>
+    <div class="Card-actions justify-end">
+      <button class="btn "btn-primary"> add Cart</button>
+    </div>
+  </div>
+</div>
+ <div>
+    <img
+      src="guava.jpg"  alt=guava
+  
+  </figure>
+  <div class="card-Boddy">
+    <h2 class="card-title">guava  tree</h2>
+    <p>A guava tree is a important tree for us , it gives us fruit timber </p>
+    <div class="Card-actions justify-end">
+      <button class="btn "btn-primary"> add Cart</button>
+    </div>
+  </div>
+</div>
+div class="card bg-base-95 w-auto shadow-sm">
+   <figure>
+    <img
+      src="mangoes.jpg" alt="mangoe"
+      alt="Shoes" />
+  </figure>
+  <div class="card-Boddy">
+    <h2 class="card-title">Mangoes tree</h2>
+    <p>A Mangoes tree is a important tree for us , it gives us fruit timber </p>
+    <div class="Card-actions justify-end">
+      <button class="btn "btn-primary"> add Cart</button>
+    </div>
+  </div>
+</div>
+  -->
   <div class="bg-[#f0fdf4] p-4 w-full lg:w-1/5 flex-shrink-0">
     <h2 class="text-xl font-bold mb-4">Categories</h2>
     <ul class="space-y-2">

@@ -1,12 +1,12 @@
 // Script.js
-const cartItems = document.getElementById("cart-items");
-const cartTotal = document.getElementById("cart-total");
-let total = 0;
+const cartItems= document.getElementById("cart-items");
+const   cartTotal=  document.getElementById("cart-total");
+     let total= 0;
 
 document.querySelectorAll(".add-to-cart").forEach(button => {
   button.addEventListener("click", () => {
-    const name = button.dataset.name;
-    const price = parseInt(button.dataset.price);
+    const name= button.dataset.name;
+    const price =parseInt(button.dataset.price);
 
     // Create a div for each cart item
     const itemDiv = document.createElement("div");
@@ -25,8 +25,8 @@ document.querySelectorAll(".add-to-cart").forEach(button => {
 
     // Add delete icon
     const deleteBtn = document.createElement("button");
-    deleteBtn.innerHTML = "&times;"; // ✖ icon
-    deleteBtn.classList.add("text-red-500", "font-bold", "ml-2");
+    deleteBtn.innerHTML = "&times;"; 
+    deleteBtn.classList.add("text-red-800", "font-bold","text-lg", "ml-[.4rem]");
     deleteBtn.addEventListener("click", () => {
       cartItems.removeChild(itemDiv);
       total -= price;
