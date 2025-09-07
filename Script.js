@@ -33,4 +33,39 @@ document.querySelectorAll(".add-to-cart").forEach(button => {
     total += price;
     cartTotal.textContent = `Total: ৳${total}`;
   });
+  
+const cards = document.querySelectorAll('.tree-card');
+const modal = document.getElementById('treeModal');
+const modalImg = document.getElementById('modalImg');
+const modalTitle = document.getElementById('modalTitle');
+const modalDescription = document.getElementById('modalDescription');
+const modalPrice = document.getElementById('modalPrice');
+const closeModalBtn = document.getElementById('closeModalBtn');
+
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    modalImg.src = card.dataset.img;
+    modalTitle.innerText = card.dataset.title;
+    modalDescription.innerText = card.dataset.description;
+    modalPrice.innerText = card.dataset.price;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  });
+});
+
+closeModalBtn.addEventListener('click', () => {
+  modal.classList.add('hidden');
+  modal.classList.remove('flex');
+});
+
+// Close modal when clicking outside content
+modal.addEventListener('click', e => {
+  if (e.target === modal) {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+});
+
+  
+
 });
