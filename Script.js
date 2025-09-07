@@ -10,21 +10,32 @@ document.querySelectorAll(".add-to-cart").forEach(button => {
 
     // Create a div for each cart item
     const itemDiv = document.createElement("div");
-    itemDiv.classList.add("mb-2", "p-2", "bg-[#f0fdf4]", "rounded", "shadow-sm");
+    itemDiv.classList.add("mb-2", "p-2", "bg-[#f0fdf4]", "rounded", "shadow-sm", "flex", "justify-between", "items-center");
 
-    // Add tree name
+    // Add tree name and price
+    const itemInfo = document.createElement("div");
     const itemName = document.createElement("p");
     itemName.textContent = name;
     itemName.classList.add("font-semibold");
-
-    // Add price × quantity under name
     const itemPrice = document.createElement("p");
     itemPrice.textContent = `৳${price} × 1`;
     itemPrice.classList.add("text-green-700", "text-sm");
+    itemInfo.appendChild(itemName);
+    itemInfo.appendChild(itemPrice);
 
-    // Append name and price to div
-    itemDiv.appendChild(itemName);
-    itemDiv.appendChild(itemPrice);
+    // Add delete icon
+    const deleteBtn = document.createElement("button");
+    deleteBtn.innerHTML = "&times;"; // ✖ icon
+    deleteBtn.classList.add("text-red-500", "font-bold", "ml-2");
+    deleteBtn.addEventListener("click", () => {
+      cartItems.removeChild(itemDiv);
+      total -= price;
+      cartTotal.textContent = `Total: ৳${total}`;
+    });
+
+    // Append info and delete button to div
+    itemDiv.appendChild(itemInfo);
+    itemDiv.appendChild(deleteBtn);
 
     // Append div to cart
     cartItems.appendChild(itemDiv);
@@ -33,6 +44,8 @@ document.querySelectorAll(".add-to-cart").forEach(button => {
     total += price;
     cartTotal.textContent = `Total: ৳${total}`;
   });
+
+
 
 function openModal(title, description, imgSrc, price) {
   const modal = document.getElementById('treeModal');
