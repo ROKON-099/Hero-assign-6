@@ -45,16 +45,34 @@
   </div>
 </header>
 
-    <!--Plant section-->
+    <!--Plant section
 
-<div class="w-full h-59 bg-green-100   rounded-md px-6 py-4 flex flex-col md:flex-row items-center justify-between flex-wrap">
+   <div class="w-full h-59 bg-green-100   rounded-md px-6 py-4 flex flex-col md:flex-row items-center justify-between flex-wrap">
   <img src="hero-leaf1.png" alt=" Leaf 1" class="hidden md:block h-55 w-auto rotate-[1.5deg]" />
+
+  <div class="text-center flex-1 px-4">
+    <h1 class="text-4xl whitespace-nowrap  font-bold text-[#1F2937]"> Plant a Tree, Grow a Future</h1>
+    <p class="text-xs mt-2 text-green-700">
+      Join our mission to plant 1 million trees and make the Earth greener for future<br> generations.
+    </p>
+  
+    <div class="w-full h-59 bg-green-100   rounded-md px-6 py-4 flex items-center justify-between">
+  <img src="hero-leaf1.png" alt=" Leaf 1" class="h-55 w-auto rotate-1.5" />
 
   <div class="text-center flex-1 px-4">
     <h1 class="text-4xl font-bold text-[#1F2937]"> Plant a Tree, Grow a Future</h1>
     <p class="text-xs mt-2 text-green-700">
       Join our mission to plant 1 million trees and make the Earth greener for future<br> generations.
     </p>
+<button class="bg-[#FACC15]   mt-4 text-[#2bb55d] font-semibold py-2 px-4 rounded-xl hover:bg-gray-300 transition">
+    Get Involved
+  </button>
+
+  </div>
+
+<img src="hero-leaf2.png" alt="hero-leaf2" class="h-55 w-auto -rotate-1.5 " />
+
+</div>
 
     <button class="bg-[#FACC15] mt-4 text-[#2bb55d] font-semibold py-2 px-4 rounded-xl hover:bg-gray-300 transition">
       Get Involved
@@ -63,8 +81,33 @@
 
   <img src="hero-leaf2.png" alt="hero-leaf2" class="hidden md:block h-55 w-auto -rotate-[1.5deg]" />
 </div>
- 
-              
+-->
+<div class="h-59 bg-green-100 rounded-md px-6 py-4 flex flex-col md:flex-row items-center justify-between flex-wrap relative">
+
+  <!-- Left Leaf (hidden on small screens) -->
+  <img src="hero-leaf1.png" alt="Leaf 1" 
+       class="hidden md:block h-55 w-auto rotate-[1.5deg] self-end" />
+
+  <!-- Center Text & Button -->
+  <div class="text-center flex-1 px-4">
+    <h1 class="text-3xl whitespace-nowrap font-bold text-[#1F2937]">
+      Plant a Tree, Grow a Future
+    </h1>
+    <p class="text-[10px] mt-1 text-green-700">
+      Join our mission to plant 1 million trees and make the Earth greener for future<br> generations.
+    </p>
+
+    <button class="bg-[#FACC15] mt-4 text-[#2bb55d] font-semibold py-2 px-4 rounded-xl hover:bg-gray-300 transition">
+      Get Involved
+    </button>
+  </div>
+
+  <!-- Right Leaf (hidden on small screens) -->
+  <img src="hero-leaf2.png" alt="hero-leaf2" 
+       class="hidden md:block h-55 w-auto -rotate-[1.5deg] self-end" />
+
+</div>
+
                   <!--Main section -->
     <h2 class="text-center text-black-1000 text-2xl mt-10 font-semibold">
         Choose your trees
@@ -203,6 +246,34 @@
 
 </section>
 <script src="Script.js"></script>
+
+
+
+              <!--campaign section-->   
+               <h2 class="text-2xl text-center mt-4 sm:text-3xl lg:text-4xl font-bold mb-4">About the Campaign</h2>
+              <section class="bg-green-50 mt-4 text-green-900 px-4 py-8 sm:px-6 md:px-12 lg:px-20 xl:px-32 rounded-xl shadow-lg max-w-screen-xl mx-auto">
+  <div class="flex flex-col lg:flex-row items-center gap-10">
+    
+    <!-- Image Section -->
+    <div class="w-full lg:w-1/2">
+      <img src="about.png" alt="green campaign" class="w-full h-auto rounded-lg shadow-md object-cover">
+    </div>
+
+    <!-- Text Section -->
+
+    <div class="w-full lg:w-1/2">
+      <p class="mb-4 text-xs whitespace-nowrap">
+        Green Earth is a global tree plantation initiative dedicated to fighting<br> climate change. Since our start, we've planted over 500,000 trees
+        <br> worldwide. By joining our campaign, you help restore forests, create<br> habitats for wildlife, and combat global warming.
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-green-800 text-xs">
+        <li> Restoration of natural habitats</li>
+        <li>Improvement of air quality</li>
+        <li> Support for local communities</li>
+      </ul>
+    </div>
+  </div>
+</section>      
     
 </body>
 </html>
