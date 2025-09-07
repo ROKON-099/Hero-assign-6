@@ -33,39 +33,44 @@ document.querySelectorAll(".add-to-cart").forEach(button => {
     total += price;
     cartTotal.textContent = `Total: ৳${total}`;
   });
+
+function openModal(title, description, imgSrc, price) {
+  const modal = document.getElementById('treeModal');
+  document.getElementById('modalTitle').innerText = title;
+  document.getElementById('modalDescription').innerText = description;
+  document.getElementById('modalImg').src = imgSrc;
+  document.getElementById('modalPrice').innerText = price;
   
-const cards = document.querySelectorAll('.tree-card');
-const modal = document.getElementById('treeModal');
-const modalImg = document.getElementById('modalImg');
-const modalTitle = document.getElementById('modalTitle');
-const modalDescription = document.getElementById('modalDescription');
-const modalPrice = document.getElementById('modalPrice');
-const closeModalBtn = document.getElementById('closeModalBtn');
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+}
 
-cards.forEach(card => {
-  card.addEventListener('click', () => {
-    modalImg.src = card.dataset.img;
-    modalTitle.innerText = card.dataset.title;
-    modalDescription.innerText = card.dataset.description;
-    modalPrice.innerText = card.dataset.price;
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
-  });
-});
-
-closeModalBtn.addEventListener('click', () => {
+// Close modal button
+document.getElementById('closeModalBtn').addEventListener('click', function() {
+  const modal = document.getElementById('treeModal');
   modal.classList.add('hidden');
   modal.classList.remove('flex');
 });
 
-// Close modal when clicking outside content
-modal.addEventListener('click', e => {
-  if (e.target === modal) {
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
+// Close modal on clicking outside modal content
+document.getElementById('treeModal').addEventListener('click', function(e) {
+  if(e.target === this){
+    this.classList.add('hidden');
+    this.classList.remove('flex');
   }
 });
 
-  
+// Add click listener to all <h3> elements inside cards
+document.querySelectorAll('.tree-card, .card h3').forEach(h3 => {
+  h3.addEventListener('click', function() {
+    // Get modal data from dataset attributes
+    const title = this.dataset.title;
+    const description = this.dataset.description;
+    const imgSrc = this.dataset.img;
+    const price = this.dataset.price;
+
+    openModal(title, description, imgSrc, price);
+  });
+});
 
 });
