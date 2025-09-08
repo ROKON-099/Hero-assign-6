@@ -17,7 +17,7 @@
 </head>
 <style>
   body {
-    background-color: #e9f7ed;
+    background-color: #f0fdf4;
 
   }
 
@@ -161,32 +161,47 @@ gap:1.5rem
     <h2 class="text-lg font-semibold text-black-900 mb-4">Categories</h2>
     <ul class=" space-y-2 text-green-800">
 
-      <li><button data-category="All trees"class="w-auto px-5 rounded-sm hover:bg-gray-300 hover:text-white">All Trees</button></li>
-      <li><button data-category="Fruit Tree" class="w-auto px-4 rounded-sm hover:bg-gray-300 hover:text-white">Fruit Tree</button></li>
-      <li><button data-category="Flowering Tree" class="w-auto px-4 rounded-sm hover:bg-green-700 hover:text-white">Flowering Trees</button></li>
-      <li><button data-category="Shade Tree" class="w-auto px-4 rounded-sm hover:bg-green-700 hover:text-white">Shade Trees</button></li>
-      <li><button data-category="Medicinal Tree" class="w-auto px-4 rounded-sm hover:bg-green-700 hover:text-white">Medicinal Tree</button></li>
-      <li><button data-category="Timber Tree" class="w-auto px-4 rounded-sm hover:bg-green-700 hover:text-white">Timber Trees</button></li>
-      <li><button data-category="Evergreen Tree" class="w-auto px-4 rounded-sm hover:bg-green-700 hover:text-white">Evergreen Trees</button></li>
-      <li><button data-category="Ornamental Plant" class="w-auto px-4 rounded-sm hover:bg-green-700 hover:text-white">Ornamental Plants</button></li>
-      <li><button data-category="Bamboo" class="w-auto px-4 rounded-sm hover:bg-green-700 hover:text-white">Bamboo</button></li>
-      <li><button data-category="Climber" class="w-auto px-4 rounded-sm hover:bg-green-700 hover:text-white">Climbers</button></li>
-      <li><button data-category="Aquatic Plant" class="w-auto px-4 rounded-sm hover:bg-green-700 hover:text-white">Aquatic Plants</button></li>
-    </ul>
-  </aside>
+      <li><button data-category="All trees"class=" w-auto px-5 rounded-sm  
+        hover:bg-green-700  hover:text-white">All Trees</button></li>
+      <li><button data-category="Fruit Tree" class="w-auto px-4 rounded-sm
+         hover:bg-green-700 hover:text-white">Fruit Tree</button></li>
+      <li><button data-category="Flowering Tree" class="w-auto
+         px-4 rounded-sm hover:bg-green-700 hover:text-white">Flowering Trees</button></li>
+      <li><button data-category="Shade Tree" class="w-auto px-4 rounded-sm
+         hover:bg-green-700 hover:text-white">Shade Trees</button></li>
+      <li><button data-category="Medicinal Tree" class="w-auto 
+        px-4 rounded-sm hover:bg-green-700 hover:text-white">Medicinal Tree</button></li>
+      <li><button data-category="Timber Tree" class="w-auto px-4 rounded-sm
+         hover:bg-green-700 hover:text-white">Timber Trees</button></li>
+      <li><button data-category="Evergreen Tree" class="w-auto 
+        px-4 rounded-sm hover:bg-green-700
+         hover:text-white">Evergreen Trees</button></li>
+      <li><button data-category="Ornamental Plant" class="w-auto 
+        px-4 rounded-sm hover:bg-green-700 hover:text-white">Ornamental Plants</button></li>
+      <li><button data-category="Bamboo" class="w-auto px-4 rounded-sm
+         hover:bg-green-700 hover:text-white">Bamboo</button></li>
+      <li><button data-category="Climber" class="w-auto px-4 rounded-sm hover:bg-green-700
+         hover:text-white">Climbers</button></li>
+      <li><button data-category="Aquatic Plant" class="w-auto 
+        px-4 rounded-sm hover:bg-green-700 hover:text-white">Aquatic Plants</button></li>
+      </ul>
+     </aside>
 
-  <!-- 🌳 Main: Tree Cards -->
+                              <!-- ___________Main: Tree Cards____________________ -->
   <main class="w-full md:w-2/4">
-    <div id="plants-container" class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6">
-      <!-- Cards injected by JS -->
+    <div id="plants-container" class="grid grid-cols-1 
+    sm:grid-cols-3 lg:grid-cols-3 gap-6">
+                  
     </div>
   </main>
 
-  <!-- 🛒 Sidebar: Cart -->
+                  <!-- ______________Sidebar: Cart___________________ -->
+
   <aside id="cart" class="w-full md:w-1/4 bg-[#ffffff] p-4 rounded-xl shadow">
-    <h2 class="text-lg font-semibold text-black-900 mb-4">Your Cart</h2>
+    <h2 class="text-lg font-semibold 
+    text-black-900 mb-4">Your Cart</h2>
     <ul id="cart-items" class="black-800 space-y-2"></ul>
-    <div id="cart-total" class="mt-4 font-bold text-black-900">Total: ৳0</div>
+     <div id="cart-total" class="mt-4 font-bold text-black-900">Total: ৳0</div>
   </aside>
 </div>
 
@@ -198,27 +213,31 @@ gap:1.5rem
 
 
 
-  <!--campaign section-->
-  <h2 class="text-2xl text-center mt-4 sm:text-3xl lg:text-4xl font-bold mb-4">About the Campaign</h2>
-  <section
-    class="bg-green-50 mt-4 text-green-900 px-4 py-8 sm:px-6 md:px-12 lg:px-20 xl:px-32 rounded-xl shadow-lg max-w-screen-xl mx-auto">
-    <div class="flex flex-col lg:flex-row items-center gap-10">
+         <!--_____________________campaign section_________________________________-->
 
-      <!-- Image Section -->
-      <div class="w-full lg:w-1/2">
-        <img src="about.png" alt="green campaign" class="w-full h-auto rounded-lg shadow-md object-cover">
+
+    <h2 class="text-2xl   text-center mt-4 sm:text-2xl lg:text-3xl
+   font-bold mb-4">About the Campaign</h2>
+  <section
+    class="bg-green-50 mt-4 text-green-900 px-4 py-8 sm:px-6 
+    md:px-12 lg:px-30 py-30 xl:px-32 rounded-xl shadow-lg max-w-screen-xl mx-auto">
+    <div class="flex flex-col lg:flex-row   justify-center gap-10">
+
+      <!--__________________________ Image Section__________________________________ -->
+      <div class="w-full   lg:w-1/4">
+        <img src="about.png" alt="A vibrant green plant with broad leaves standing upright against a bright white background, conveying a fresh and hopeful atmosphere. No visible text in the image." class="w-full mb-4 items-center h-auto ">
       </div>
 
-      <!-- Text Section -->
+      <!--_______________________________________ Text Secion___________________________________ -->
 
-      <div class="w-full lg:w-1/2">
-        <p class="mb-4 text-xs whitespace-nowrap">
+      <div class="w-full  lg:w-1/4">
+        <p class="mt-10 text-xs  whitespace-nowrap">
           Green Earth is a global tree plantation initiative dedicated to fighting<br> climate change. Since our start,
           we've planted over 500,000 trees
           <br> worldwide. By joining our campaign, you help restore forests, create<br> habitats for wildlife, and
           combat global warming.
         </p>
-        <ul class="list-disc list-inside space-y-2 text-green-800 text-xs">
+        <ul class="list-disc list-inside mt-5 space-y-2 text-green-800 text-xs">
           <li> Restoration of natural habitats</li>
           <li>Improvement of air quality</li>
           <li> Support for local communities</li>
@@ -228,7 +247,7 @@ gap:1.5rem
   </section>
 
   <!--Review section-->
-  <section class="bg-green-50 text-green-900 px-4 py-10 sm:px-6 md:px-12 lg:px-20 xl:px-32 max-w-screen-xl mx-auto">
+  <section class="bg-[#cff0dc] text-green-900 px-4 py-10 sm:px-6 md:px-12 lg:px-20 xl:px-32 max-w-screen-xl mx-auto">
     <!-- Section Title -->
     <h2 class="text-2xl text-black sm:text-3xl lg:text-4xl font-bold text-center mb-8">Our Impact</h2>
 
@@ -304,17 +323,17 @@ gap:1.5rem
     </div>
 
   </section>
-  <!--footer-->
+            <!--___________________--footer_________________________________-->
 
   <footer class="bg-[#14532d] py-4 px-4 sm:px-6 md:px-8">
     <p class="text-sm text-center text-white">
-      © 2023 Green Earth. All rights reserved.
+      © 2025 Green Earth. All rights reserved.
     </p>
   </footer>
 
 
 
-  <script src="index.js"></script>
+<script src="index.js"></script>
 
 </body>
 
