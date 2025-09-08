@@ -1,95 +1,174 @@
-// ================= Spinner =================
-const spinner = document.createElement('div');
-spinner.className = 'fixed inset-0 bg-black bg-opacity-20 flex items-center justify-center z-50 hidden';
-spinner.innerHTML = `<div class="loader border-4 border-t-green-500 border-gray-200 rounded-full w-12 h-12 animate-spin"></div>`;
-document.body.appendChild(spinner);
-function showSpinner() { spinner.classList.remove('hidden'); }
-function hideSpinner() { spinner.classList.add('hidden'); }
+//api fetch from ph-hero api //
+    //https://openapi.programming-hero.com/api/plants api//
 
-// ================= Plants API =================
-const PLANTS_API_URL = 'https://openapi.programming-hero.com/api/plants';
-const container = document.getElementById('plants-container');
-let allPlants = [];
+    const PLANTS_API_URL = 'https://openapi.programming-hero.com/api/plants';
 
-async function fetchPlants() {
-  showSpinner();
-  try {
-    const res = await fetch(PLANTS_API_URL);
-    const data = await res.json();
-    allPlants = data.plants || data;
-    loadPlants(allPlants); // page load এ সব plant দেখাবে
-  } catch (err) {
-    console.error('Error fetching plants:', err);
-    container.innerHTML = `<p class="text-red-500">Failed to load plants.</p>`;
-  } finally {
-    hideSpinner();
+    const container = document.getElementById('plants-container');
+    let allPlants = [];
+
+  async function fetchPlants() {
+
+   displaySpinner();
+   try {
+
+   const response = await fetch(PLANTS_API_URL);
+
+   const responsedata = await response.json();
+
+  allPlants = responsedata.plants || responsedata;
+   loadPlants(allPlants);  }  // page load korle sobgulo plants dekhabe
+   catch (error) {
+
+       console.error('Failed to retrieve plants:', err);
+
+    container.innerHTML = `<p class="text-red-500">unable to load plants.</p>`; } 
+   finally {
+
+    hiddenSpinner(); }
+    
   }
-}
 
-// ================= Categories =================
-const categoryButtons = document.querySelectorAll('[data-category]');
+           // initialize and display spinner //
 
-categoryButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const category = btn.getAttribute('data-category');
-    filterPlantsByCategory(category);
-    setActiveButton(btn);
+   const spinner = document.createElement('div'); //generate a new div for spinner
+   spinner.className = 'fixed inset-0 bg-black bg-opacity-20 flex items-center justify-center z-50 not-visible';
+   spinner.innerHTML = `<div class="loader border-4
+    border-t-gray-500 border-gray-200 rounded-full w-10 h-10 animate-spin"></div>`;
+
+        document.body.appendChild(spinner);
+
+        function displaySpinner() 
+        { spinner.classList.remove('invisible'); }
+
+         function hiddenSpinner() 
+         { spinner.classList.add('invisible'); }
+
+                // load and show spnier//
+
+   const categoryButtons = document.querySelectorAll('[data-category]');
+
+  categoryButtons.forEach(btn => {
+  btn.addEventListener('click', function() {
+   const category = btn.getAttribute('data-category');
+
+          filterPlantsByCategory(category);
+
+             setActiveButton(btn);
   });
+
 });
 
-// ================= Active Button =================
-function setActiveButton(button) {
+
+
+    //set a : Active Buttoon//
+
+     function setActiveButton(button) {
   categoryButtons.forEach(btn => {
-    btn.classList.remove('bg-green-600', 'text-white');
-    btn.classList.add('hover:bg-green-700', 'hover:text-white');
+
+      btn.classList.remove('bg-green-600', 'text-white');
+  btn.classList.add('hover:bg-[#15803d]', 'hover:text-white');
+
   });
-  button.classList.add('bg-green-600', 'text-white');
-  button.classList.remove('hover:bg-green-700', 'hover:text-white');
+
+     button.classList.add('bg-green-600', 'text-white');
+  button.classList.remove('hover:bg-green-700', 'hover:text-white'); }
+
+
+    
+
+             //  Filter Plants by catagory //
+
+
+ function filterPlantsByCategory(category) {
+  displaySpinner();
+   
+  setTimeout(() => {
+    if (category === 'All trees') {
+      loadPlants(allPlants);
+    } else {
+      const filtered = allPlants.filter(p => p.category === category);
+      loadPlants(filtered);
+    }
+    hiddenSpinner();
+  }, 300);
 }
+document.querySelectorAll('.catergory-btn').forEach(btn => {btn.addEventListener('click',() => {
+  const category =btn.getAttribute('data-catergory');
+  filterCategory(category);
 
-// ================= Filter Plants =================
-function filterPlantsByCategory(category) {
-  if (category === 'All trees') {
-    loadPlants(allPlants);
-  } else {
-    const filtered = allPlants.filter(p => p.category === category);
-    loadPlants(filtered);
-  }
+});
+});
+fetchPlants();
+
+   // Load Plant Cardds//
+
+    function loadPlants(plants) {
+    container.innerHTML = '';
+
+    if (!plants || plants.length === 0) {
+        container.innerHTML = `<p class="text-gray-500">No plants found.</p>`;
+        return;
+    }
+
+    plants.forEach(p => {
+        const card = document.createElement('div');
+        card.className = "bg-white rounded-xl shadow p-4 hover:shadow-lg flex flex-col";
+
+        card.innerHTML = `
+            <!-- Image -->
+            <img src="${p.image}" alt="${p.name}" 
+                 class="w-full h-40 object-cover rounded-lg mb-3">
+
+            <!-- Name -->
+            <h2 class="text-lg font-bold text-gray-800 cursor-pointer truncate hover:underline mb-1">
+              ${p.name}
+            </h2>
+
+            <!-- Description -->
+            <p class="text-xs text-gray-500 mb-3 line-clamp-3">
+              ${p.description || 'No description available'}
+            </p>
+
+            <!-- Category + Price -->
+            <div class="flex items-center justify-between mb-3">
+              <!-- Category Badge -->
+              <span class="text-sm text-[#1aba54] w-auto py-1 rounded-lg truncate  bg-[#caf8da]">
+                ${p.category}
+              </span>
+              <!-- Price -->
+              <span class="text-black font-semibold">
+                ৳${p.price}
+              </span>
+            </div>
+
+            <!-- Button -->
+            <button class="bg-green-600 text-white w-full py-1 rounded-lg hover:bg-gray-300 transition">
+              Add To Cart
+            </button>
+        `;
+
+        // Add event listeners for each card
+        card.querySelector('button').addEventListener('click', () => addToCart(p));
+        card.querySelector('h2').addEventListener('click', () => openModal(p));
+
+        container.appendChild(card);
+    });
 }
+   
 
-// ================= Load Plant Cards =================
-function loadPlants(plants) {
-  container.innerHTML = '';
-  if (!plants || plants.length === 0) {
-    container.innerHTML = `<p class="text-gray-500">No plants found.</p>`;
-    return;
-  }
 
-  plants.forEach(p => {
-    const card = document.createElement('div');
-    card.className = "bg-white rounded-lg shadow p-4 hover:shadow-lg flex flex-col";
 
-    card.innerHTML = `
-      <img src="${p.image}" alt="${p.name}" class="w-full h-40 object-cover rounded-lg mb-3">
-      <h2 class="text-lg font-bold text-green-700 cursor-pointer hover:underline">${p.name}</h2>
-      <p class="text-xs text-gray-500 mb-2">${p.description || 'No description'}</p>
-      <p class="text-sm font-bold text-gray-600 mb-2">${p.category}</p>
-      <p class="text-blue-600 font-semibold mb-3">৳${p.price}</p>
-      <button class="bg-green-600 text-white py-1 px-3 rounded hover:bg-green-700 mt-auto">Add to Cart</button>
-    `;
 
-    card.querySelector('button').addEventListener('click', () => addToCart(p));
-    card.querySelector('h2').addEventListener('click', () => openModal(p));
-    container.appendChild(card);
-  });
-}
 
-// ================= Cart =================
-const cartItemsList = document.getElementById('cart-items');
-const cartTotalEl = document.getElementById('cart-total');
-let cart = [];
 
-function addToCart(plant) {
+//_____________________cart option __________________________//
+
+
+   const cartItemsList = document.getElementById('cart-items');
+   const cartTotalEl = document.getElementById('cart-total');
+   let cart = [];
+
+  function addToCart(plant) {
   cart.push(plant);
   renderCart();
 }
