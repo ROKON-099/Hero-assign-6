@@ -60,7 +60,7 @@
 
 
 
-    //set a : Active Buttoon//
+    //set a_______________________Active Buttoon______________________________________//
 
      function setActiveButton(button) {
   categoryButtons.forEach(btn => {
@@ -80,7 +80,7 @@
 
 
  function filterPlantsByCategory(category) {
-  displaySpinner();
+     displaySpinner();
    
   setTimeout(() => {
     if (category === 'All trees') {
@@ -92,20 +92,21 @@
     hiddenSpinner();
   }, 300);
 }
-document.querySelectorAll('.catergory-btn').forEach(btn => {btn.addEventListener('click',() => {
+    document.querySelectorAll('.catergory-btn').
+   forEach(btn => {btn.addEventListener('click',() => {
   const category =btn.getAttribute('data-catergory');
-  filterCategory(category);
+       filterCategory(category);
 
-});
-});
-fetchPlants();
+   });
+  });
+      fetchPlants();
 
-   // Load Plant Cardds//
+   // __________________________Load Plant Cardds_______________________________________//
 
     function loadPlants(plants) {
-    container.innerHTML = '';
+      container.innerHTML = '';
 
-    if (!plants || plants.length === 0) {
+     if (!plants || plants.length === 0) {
         container.innerHTML = `<p class="text-gray-500">No plants found.</p>`;
         return;
     }
@@ -165,11 +166,11 @@ fetchPlants();
 
 
    const cartItemsList = document.getElementById('cart-items');
-   const cartTotalEl = document.getElementById('cart-total');
+     const cartTotalEl = document.getElementById('cart-total');
    let cart = [];
 
   function addToCart(plant) {
-  cart.push(plant);
+    cart.push(plant);
   renderCart();
 }
 function renderCart() {
@@ -195,58 +196,66 @@ function renderCart() {
     cartItemsList.appendChild(li);
   });
 
-  cartTotalEl.textContent = `Total: ৳${total}`;
+     cartTotalEl.textContent = `Total: ৳${total}`;
 }
 
 
 
 
-function removeFromCart(name) {
-  cart = cart.filter(item => item.name !== name);
-  renderCart();
-}
+        function removeFromCart(name) {
+             cart = cart.filter(item => item.name !== name);
+              renderCart();}
+                      
 
-// ================= Modal =================
-function openModal(plant) {
-  let modal = document.getElementById('plant-modal');
-  if (!modal) {
+// ____________________________ Modal________________________________//
+
+      function openModal(plant) {
+     let modal = document.getElementById('plant-modal');
+    if (!modal) {
     modal = document.createElement('div');
+
     modal.id = 'plant-modal';
     modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
     modal.innerHTML = `
       <div class="bg-white p-6 rounded-lg shadow-lg w-96 relative">
-        <button onclick="closeModal()" class="absolute top-2 right-2 text-red-500 text-lg font-bold">✖</button>
+        <button onclick="closeModal()" class="absolute top-2 right-2
+         text-red-500 text-lg font-bold">✖</button>
         <div id="modal-content"></div>
       </div>`;
     document.body.appendChild(modal);
-  }
+                                      }
 
   const modalContent = modal.querySelector('#modal-content');
+
   modalContent.innerHTML = `
     <img src="${plant.image}" alt="${plant.name}" class="w-full h-60 object-cover rounded-lg mb-3">
     <h2 class="text-xl font-bold mb-2">${plant.name}</h2>
-    <p class="text-gray-600 mb-2"><strong>Category:</strong> ${plant.category}</p>
-    <p class="text-gray-600 mb-2"><strong>Price:</strong> ৳${plant.price}</p>
-    <p class="text-gray-500 mb-2">${plant.description || 'No description available'}</p>
-  `;
+     <p class="text-gray-600 mb-2">
+      <strong>Category:
+      </strong> ${plant.category}</p>
+    <p class="text-gray-600 mb-2">
+     <strong>Price:</strong> ৳${plant.price}</p>
+     <p class="text-gray-500 mb-2">${plant.description || 'No description available'}</p> `;
   modal.classList.remove('hidden');
-}
+             }
 
 function closeModal() {
   const modal = document.getElementById('plant-modal');
   if (modal) modal.classList.add('hidden');
-}
+            }
 
-// ================= Initial Load =================
-window.addEventListener('DOMContentLoaded', () => {
-  fetchPlants();
+//_______________________________ load _______________________________________//
+   window.addEventListener('DOMContentLoaded', () => {
+     fetchPlants();
 
-  // Set default active "All Trees"
+
   const defaultBtn = document.querySelector('[data-category="All trees"]');
-  if (defaultBtn) setActiveButton(defaultBtn);
-});
+  
+  if (defaultBtn) setActiveButton(defaultBtn); });
+                                               
 
-
+//__________________________end__________________________________________//
+//___________________________end____________________________________________//
 
 
 
