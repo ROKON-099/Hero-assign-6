@@ -219,13 +219,12 @@ function renderCart() {
     modal.innerHTML = `
       <div class="bg-white p-6 rounded-lg shadow-lg w-96 relative">
         <button onclick="closeModal()" class="absolute top-2 right-2
-         text-red-500 text-lg font-bold">✖</button>
+         text-red-500 text-lg ">❌</button>
         <div id="modal-content"></div>
       </div>`;
     document.body.appendChild(modal);
                                       }
-
-  const modalContent = modal.querySelector('#modal-content');
+        const modalContent = modal.querySelector('#modal-content');
 
   modalContent.innerHTML = `
     <img src="${plant.image}" alt="${plant.name}" class="w-full h-60 object-cover rounded-lg mb-3">
@@ -238,6 +237,8 @@ function renderCart() {
      <p class="text-gray-500 mb-2">${plant.description || 'No description available'}</p> `;
   modal.classList.remove('hidden');
              }
+
+
 
 function closeModal() {
   const modal = document.getElementById('plant-modal');
