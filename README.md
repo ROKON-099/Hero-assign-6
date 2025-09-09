@@ -102,6 +102,44 @@ in JavaScript introduced in ES6, using the => (arrow) syntax.
 
 ____________________________________________________________________________________________________________________________________________________________
 
+Answer to the question no :4
+
+Destructuring assignment is an ES6 feature that is a easy way to unpack
+
+values from arrays or properties from objects into separate variables .
+
+It work on some step that are;
+
+1.	Array Destructuring
+  
+2.	Object Destructuring
+  
+3.	Nested Destructuring
+___________________________________________________________________________________________________________________________________________________________
+
+____________________________________________________________________________________________________________________________________________________________
+
+
+Answer to the question no .5:
+
+
+Template literals are a new way of creating strings in ES6 using backticks (`) instead of quotes ('or").
+
+They allow string  inserting variables directly, multi-line strings, and embedded expressions.
+
+Here I discuss the difference between string concatenation 
+
+Template Literals (ES6)
+
+String concatenation: It is a old way , it is use ‘+’ for joining two string .
+
+expression support and readability are very hard , on multiple support line need \n;
+
+Template Literals (ES6): It is a new way , Uses backticks `, ${ } for vars, it is very easy read ,
+
+clean and easy to write it direct support multiple support lite;
+
+
 
 
 
