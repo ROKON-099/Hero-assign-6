@@ -64,7 +64,10 @@ ________________________________________________________________________________
 _____________________________________________________________________________________________________________________________________________________________
 
 Answer to the question no:2
-map(), forEach(), and filter() are the method of , Javascript , mainly those are used to create new array with different condition;
+
+map(), forEach(), and filter() are the method of , Javascript 
+
+, mainly those are used to create new array with different condition;
 
 now iam discuss about the difference between map(), forEach(), and filter()
 
