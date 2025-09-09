@@ -57,5 +57,53 @@ const id=36;
 
 id=37;(error)
 
-const id=38(error)
+const id=38(error)#
+
+___________________________________________________________________________________________________________________________________________________________
+
+_____________________________________________________________________________________________________________________________________________________________
+
+Answer to the question no:2
+map(), forEach(), and filter() are the method of , Javascript , mainly those are used to create new array with different condition;
+
+now iam discuss about the difference between map(), forEach(), and filter()
+
+map(), is a method of javascript that is used to that create a new array 
+
+by using new function to through each element of the main array . it cannot able to change it .
+
+and it is return a new array ;
+
+filter(), is a method of javascript that is used to create an new array ,
+
+and it contain the value of orginal array and it will create when some condition will pass;
+
+it does not change the old array, (orginall) n
+
+ The forEach() method is an array method that go through  a provided
+ 
+ function once for each element of an array. And it has no return value that means undefined ;
+_________________________________________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________________________________________
+
+
+Answer to the question no:3
+
+An arrow function is a shorter and easy  way to write functions 
+
+in JavaScript introduced in ES6, using the => (arrow) syntax.
+
+ It does not have its own this,parameter/ arguments, 
+ 
+ or super, instead it takes them from the surrounding scope.
+
+ __________________________________________________________________________________________________________________________________________________________
+
+____________________________________________________________________________________________________________________________________________________________
+
+
+
+
+
 
