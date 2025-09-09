@@ -133,7 +133,7 @@
             <!-- Category + Price -->
             <div class="flex items-center justify-between mb-3">
               <!-- Category Badge -->
-              <span class="text-sm text-[#1aba54] w-auto py-1 rounded-lg truncate  bg-[#caf8da]">
+              <span class="text-sm text-[#1aba54] w-auto py-1 rounded-lg text-center truncate  bg-[#dcfce7]">
                 ${p.category}
               </span>
               <!-- Price -->
@@ -143,7 +143,7 @@
             </div>
 
             <!-- Button -->
-            <button class="bg-green-600 text-white w-full py-1 rounded-lg hover:bg-gray-300 transition">
+            <button class="bg-[#15803d] text-white w-full py-1 rounded-xl hover:bg-gray-300 transition">
               Add To Cart
             </button>
         `;
